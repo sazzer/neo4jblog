@@ -37,8 +37,24 @@ DEFAULT_PAGINATION = 10
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
+PLUGIN_PATHS=[os.path.join(base_path, 'pelican-plugins')]
+PLUGINS = ['i18n_subsites', 'sitemap']
+
 THEME = os.path.join(base_path, 'pelican-themes/pelican-bootstrap3')
 JINJA_EXTENSIONS = ['jinja2.ext.i18n']
 
-PLUGIN_PATHS=[os.path.join(base_path, 'pelican-plugins')]
-PLUGINS = ['i18n_subsites']
+
+SITEMAP = {
+    'format': 'xml',
+    'priorities': {
+        'articles': 0.5,
+        'indexes': 0.5,
+        'pages': 0.5
+    },
+    'changefreqs': {
+        'articles': 'daily',
+        'indexes': 'daily',
+        'pages': 'daily'
+    }
+
+}
