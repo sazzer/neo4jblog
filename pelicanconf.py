@@ -5,7 +5,7 @@ import os
 
 base_path = os.path.dirname(os.path.realpath(__file__))
 
-AUTHOR = u'Graham Cox'
+AUTHOR = u'Graham Cox <graham@grahamcox.co.uk>'
 SITENAME = u'Neo4J from the ground up'
 SITEURL = ''
 
@@ -23,14 +23,12 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('Pelican', 'http://getpelican.com/'),
-         ('Python.org', 'http://python.org/'),
-         ('Jinja2', 'http://jinja.pocoo.org/'),
-         ('You can modify those links in your config file', '#'),)
+LINKS = (('Neo4J', 'http://neo4j.com/'),
+        )
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+SOCIAL = (('Twitter', 'http://twitter.com/grahamcox82'),
+         )
 
 DEFAULT_PAGINATION = 10
 
