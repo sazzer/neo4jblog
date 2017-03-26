@@ -1,6 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
+import os
+
+base_path = os.path.dirname(os.path.realpath(__file__))
 
 AUTHOR = u'Graham Cox'
 SITENAME = u'Neo4J from the ground up'
@@ -33,3 +36,9 @@ DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
+
+THEME = os.path.join(base_path, 'pelican-themes/pelican-bootstrap3')
+JINJA_EXTENSIONS = ['jinja2.ext.i18n']
+
+PLUGIN_PATHS=[os.path.join(base_path, 'pelican-plugins')]
+PLUGINS = ['i18n_subsites']
